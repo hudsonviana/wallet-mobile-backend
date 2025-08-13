@@ -20,6 +20,10 @@ app.use((req, res, next) => {
   next()
 })
 
+app.get('/', (req, res) => {
+  res.status(200).json({ test: 'ok' })
+})
+
 app.get('/api/ping', (req, res) => {
   res.status(200).json({ pong: true })
 })
